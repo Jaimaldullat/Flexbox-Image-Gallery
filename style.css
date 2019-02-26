@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Srisakdi:400,700');
+html,
+body {
+    height: 100%;
+    font-family: 'Srisakdi';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.panel-1 {
+    background: url("images/1.jpg");
+    background-size: cover;
+}
+
+.panel-2 {
+    background: url("images/2.jpg");
+    background-size: cover;
+}
+
+.panel-3 {
+    background: url("images/3.jpg");
+    background-size: cover;
+}
+
+.panel-4 {
+    background: url("images/4.jpg");
+    background-size: cover;
+}
+
+.panel-5 {
+    background: url("images/5.jpg");
+    background-size: cover;
+}
+
+.panels {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.panel {
+    font-size: 4rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 1s ease-in-out, left 1.5s ease-in-out;
+    -webkit-transition: all 1s ease-in-out, left 1.5s ease-in-out;
+    -moz-transition: all 1s ease-in-out, left 1.5s ease-in-out;
+    -ms-transition: all 1s ease-in-out, left 1.5s ease-in-out;
+    -o-transition: all 1s ease-in-out, left 1.5s ease-in-out;
+}
+
+.panel * {
+    color: #fff;
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+
+.panel *:first-child {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+.panel.open-active *:first-child {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.panel *:last-child {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+}
+
+.panel.open-active *:last-child {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.panel.active {
+    flex: 5;
+    font-size: 5rem;
+}
